@@ -4,25 +4,22 @@
 (insert description)
 
 Features
-
-- (Feature One)
-- (Feature Two)
-- (Feature Three)
+- (insert feature one)
+- (insert feature two)
+- (insert feature three)
 
 ## Idea Two
 (insert description)
 
 Features
-
-- (Feature One)
-- (Feature Two)
-- (Feature Three)
+- (insert feature one)
+- (insert feature two)
+- (insert feature three)
 
 ## Idea Three
 (insert description)
 
 Features
-
-- (Feature One)
-- (Feature Two)
-- (Feature Three)
+- (insert feature one)
+- (insert feature two)
+- (insert feature three)

@@ -1,4 +1,4 @@
-# Proposals
+# Capstone Project Proposals
 
 ## Idea One
 (insert description)

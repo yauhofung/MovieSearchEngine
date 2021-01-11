@@ -1,12 +1,12 @@
 # Capstone Project Proposals
 
 ## Idea One
-(insert description)
+A stock tracker website that allows users to play-buy stocks and track their net value over time.
 
 Features
-- (insert feature one)
-- (insert feature two)
-- (insert feature three)
+- Users can input the stock name.
+- Website spits back where it is in the market.
+- user can choose when to invest "fun money" to see how much they make over time.
 
 ## Idea Two
 (insert description)

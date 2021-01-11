@@ -9,12 +9,12 @@ Features
 - user can choose when to invest "fun money" to see how much they make over time.
 
 ## Idea Two
-(insert description)
+Movie search engine
 
 Features
-- (insert feature one)
-- (insert feature two)
-- (insert feature three)
+-  return similar genre movies to user
+-  user can search movies
+-  engine remembers your genre likes and dislikes
 
 ## Idea Three
 An encryption website that encrypts and decrypts user inputs.

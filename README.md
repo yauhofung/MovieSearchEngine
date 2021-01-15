@@ -1,15 +1,39 @@
-# Phase 1
+# MEC TTP 2021 Winter Assignment 11: Capstone Outline
+
+## Purpose
+
+To plan out a full outline of your capstone project to get everyone on your team on the same page and to allow the instructional staff to anticipate your needs and roadblocks.
 
 ## Task
-Please create a github repo for your group's capstone project. You'll be using the same repo for your capstone project for the rest of the bootcamp. For Phase 1, please create a `proposals.md` file with 3 ideas for what your team would like to build. For each idea, give:
 
-- 1 sentence description of its purpose
-- A list of high level, top down features that it would be able to do. don't worry about implementation / coding details
+Produce a full, detailed project outline for your capstone project. This includes:
 
-These projects should take data either from the user and/or a 3rd party and process it in some way. Here are some examples:
+- Purpose statement
+- High level features / user stories
+- Detailed sketches
+- Pseudocode to explain the more complex parts
 
-A stock tracker website that allows users to play-buy stocks and track their net value over time.  
-A restaurant discovery website that allows users to enter their location and food preferences / restrictions and receive a list of restaurants that meet those criteria.
+Upon review, we will make adjustments to your outline to increase or decrease complexity as needed.
 
-## Due
-11:59pm on Jan 11, 2021
+## Requirements
+
+Your capstone project must:
+
+1. Be responsive
+2. Use React
+3. Use React Router
+4. Use Custom Components
+5. Use Forms and Validation
+6. Be hosted on Github with proper commit, branch, and issue workflows
+7. Call at least 1 3rd party API
+
+Optionally, your capstone project can:
+
+1. Integrate with a node server
+2. Integrate with a database
+
+## Submission
+
+Submit a single github link before 11:59pm EST on Jan 19, 2021 using the following form. Only one student on your team needs to submit and be sure to tag all the team members when submitting.
+
+[https://airtable.com/shrdhk3TgUWZ6pFO5](https://airtable.com/shrdhk3TgUWZ6pFO5)

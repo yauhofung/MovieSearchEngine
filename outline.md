@@ -1,12 +1,12 @@
 # Capstone Outline
 
 ## Purpose
-(insert purpose statement)
+A search engine that allows users to search for movies.
 
 ## Features
-- (insert feature one)
-- (insert feature two)
-- (insert feature three)
+- Users can search for movies by title and/or genre.
+- Users can view a list of similiar movies on a movie's page.
+- Users can view a list of recommended movies based on their search history.
 
 ## Implementations
 - (insert implementation one)

@@ -1,4 +1,4 @@
-# Capstone Project Proposals
+# Capstone Proposals
 
 ## Idea One
 A stock tracker website that allows users to play-buy stocks and track their net value over time.

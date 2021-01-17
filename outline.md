@@ -13,7 +13,7 @@ A search engine that allows users to search for movies.
 - (insert implementation two)
 - (insert implementation three)
 
-## Psuedocode
+## Pseudocode
 - Input();
 - SearchMovie();
 - CompareGenre();

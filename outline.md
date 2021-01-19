@@ -13,3 +13,7 @@ A search engine that allows users to search for movies.
 - SearchMovie();
 - CompareGenre();
 - ReturnMovies();
+
+## User Stories
+1. Kris decides to take a break from practicing Javascript. He decides that he will take a two to three hour break and felt the best escape would be a movie. He decides on the horror genre and opens up the "Movie Search Engine."
+2. Yau Ho has been hearing about *Synchronic*, a Sci-Fi film and decides to look it up and see what it's about using the "Movie Search Engine."

@@ -6,7 +6,7 @@ import KeyboardBackspaceIcon from '@material-ui/icons/KeyboardBackspace';
 
 import Navbar from './components/Navbar';
 import Test from './components/Test';
-import SearchBar from './components/SearchBar';
+import SearchForm from './components/SearchForm';
 
 class App extends React.Component {
 
@@ -23,7 +23,7 @@ class App extends React.Component {
 						</Button>
 					</Link>
 
-					<SearchBar />
+					<SearchForm />
 
 					{/* The Switch */}
 					<Switch>

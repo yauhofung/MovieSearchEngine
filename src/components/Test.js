@@ -7,7 +7,8 @@ class Test extends React.Component {
 		return (
 			<Container>
 				<h4>
-					Hello World!
+					Advanced search goes here:
+					
 				</h4>
 			</Container>
 		);

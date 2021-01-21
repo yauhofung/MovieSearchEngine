@@ -1,10 +1,10 @@
 import React from 'react';
+
 import { Container, TextField, Button } from '@material-ui/core';
 
-
 class SearchBar extends React.Component {
-	constructor() {
-		super()
+	constructor(props) {
+		super(props)
 		this.state = {
 			movies: [],
 			searchTerm: ''
@@ -25,24 +25,19 @@ class SearchBar extends React.Component {
 
 	render() {
 		return (
-			<div>
-				<Container>
-					<TextField
-						variant="filled"
-						label="Search Movie"
-						color="primary"
-						fullWidth="true"
-						style={{margin: '0 0 10px 0'}}
-					/>
+			<Container>
+				<TextField
+					variant='filled'
+					label='Search Movie'
+					color='primary'
+					fullWidth
+					style={{ margin: '0 0 10px 0' }}
+				/>
 
-					<Button
-						color='primary'
-						variant='contained'
-						fullWidth='true'>
-						Search
-						</Button>
-				</Container>
-			</div>
+				<Button color='primary' variant='contained' fullWidth>
+					Search
+				</Button>
+			</Container>
 		);
 	}
 }

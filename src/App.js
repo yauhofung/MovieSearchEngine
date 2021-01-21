@@ -14,7 +14,7 @@ class App extends React.Component {
 		return (
 			<>
 				<Navbar />
-				<Container>
+				<Container style={{padding: '70px 0 0 0'}}>
 
 					{/* The Link to='' */}
 
@@ -28,6 +28,9 @@ class App extends React.Component {
 							<h3>Recommended movies go here: </h3>
 							{/* Grid here */}
 							<h3>Recent movies go here: </h3>
+							<Container style={{height:'6000px'}}>
+
+							</Container>
 							{/* Grid here too */}
 						</Route>
 					</Switch>

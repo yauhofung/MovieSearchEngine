@@ -9,7 +9,7 @@ import SearchIcon from '@material-ui/icons/Search';
 class Navbar extends React.Component {
 	render() {
 		return (
-			<AppBar position='static' color='primary'>
+			<AppBar position='fixed' color='primary'>
 				<Toolbar>
 					<IconButton color='secondary' >
 						<Link to='/' color='primary'>

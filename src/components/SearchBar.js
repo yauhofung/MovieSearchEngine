@@ -31,8 +31,10 @@ class SearchBar extends React.Component {
 						variant="filled"
 						label="Search Movie"
 						color="primary"
+
 						size="small"
 						style={{backgroundColor: 'white'}}
+
 
 					/>
 
@@ -41,6 +43,7 @@ class SearchBar extends React.Component {
 						variant='contained'
 						style={{height: '50px'}}
 						>
+
 						Search
 						</Button>
 				</Container>

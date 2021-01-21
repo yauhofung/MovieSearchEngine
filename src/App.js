@@ -1,6 +1,6 @@
 import React from 'react';
-
 import { Container, Button } from '@material-ui/core';
+
 import { Switch, Route, Link } from 'react-router-dom';
 
 
@@ -12,7 +12,7 @@ class App extends React.Component {
 
 	render() {
 		return (
-			<>
+			<div>
 				<Navbar />
 				<Container style={{padding: '70px 0 0 0'}}>
 
@@ -21,9 +21,10 @@ class App extends React.Component {
 
 					{/* The Switch */}
 					<Switch>
-						<Route path='/Test'>
+						<Route path="/Test">
 							<Test />
 						</Route>
+
 						<Route path='/'>
 							<h3>Recommended movies go here: </h3>
 							{/* Grid here */}
@@ -32,11 +33,12 @@ class App extends React.Component {
 
 							</Container>
 							{/* Grid here too */}
+
 						</Route>
 					</Switch>
 
 				</Container>
-			</>
+			</div>
 		);
 	}
 }

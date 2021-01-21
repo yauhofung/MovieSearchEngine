@@ -1,21 +1,30 @@
 import React from 'react';
-import { Container, TextField, Button } from '@material-ui/core';
+import { TextField, Container, Button } from '@material-ui/core';
 
 
 class SearchBar extends React.Component {
-	constructor() {
-		super()
+
+	constructor(props) {
+		super(props)
 		this.state = {
+			search: '',
 			movies: [],
 			searchTerm: ''
 		}
 		this.apiKey = process.env.REACT_APP_API
 	}
 
-	handleSubmit = (e) => {
-		e.preventDefault();
+	handleSearchChange = (event) => {
+		this.setState({
+			search: event.target.value
+		})
+	}
 
-		fetch(`https://api.themoviedb.org/3/search/movie?api_key=${this.apiKey}&query=${this.state.searchTerm}`)
+	handleSubmit = (event) => {
+		event.preventDefault();
+		console.log(`${this.state.search}`)
+
+		fetch(`https://api.themoviedb.org/3/search/movie?api_key=${this.apiKey}&query=${this.state.search}`)
 			.then(data => data.json())
 			.then(data => {
 				console.log(data);
@@ -27,25 +36,28 @@ class SearchBar extends React.Component {
 		return (
 			<div>
 				<Container>
-					<TextField
-						variant="filled"
-						label="Search Movie"
-						color="primary"
+					<form onSubmit={this.handleSubmit}>
+						<TextField
+							variant="filled"
+							label="Search Movie"
+							color="primary"
+							type="text"
+							value={this.state.search}
+							onChange={this.handleSearchChange}
+							size="small"
+							style={{ backgroundColor: 'white' }}
 
-						size="small"
-						style={{backgroundColor: 'white'}}
+						/>
 
-
-					/>
-
-					<Button
-						color='primary'
-						variant='contained'
-						style={{height: '50px'}}
+						<Button
+							type='submit'
+							color='primary'
+							variant='contained'
+							style={{ height: '50px' }}
 						>
-
-						Search
+							Search
 						</Button>
+					</form>
 				</Container>
 			</div>
 		);

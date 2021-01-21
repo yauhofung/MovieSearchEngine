@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container } from '@material-ui/core';
+import { Container, Button } from '@material-ui/core';
 import Navbar from './components/Navbar';
 import SearchBar from './components/SearchBar';
 import {
@@ -8,19 +8,23 @@ import {
 	Link
 } from "react-router-dom";
 import Test from './Test';
+import KeyboardBackspaceIcon from '@material-ui/icons/KeyboardBackspace';
 
 class App extends React.Component {
+
 	render() {
 		return (
 			<div>
 				<Navbar />
 				<Container>
-					
+
 					{/* The Link to="" */}
 
-					<Link to="/Test">Test</Link>
-					<br/>
-					<br/>
+					<Link to="/Test">
+						<Button style={{color: 'black', margin: '5px 0 0 5px' }}>
+							<KeyboardBackspaceIcon />
+						</Button>
+					</Link>
 					<SearchBar />
 
 					{/* The Switch */}

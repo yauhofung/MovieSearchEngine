@@ -21,7 +21,7 @@ class Navbar extends React.Component {
                     <Toolbar>
                         <IconButton color="secondary" >
                             <Link to="/" color="primary">
-                                <HomeIcon />
+                                <HomeIcon style={{color: 'white'}}/>
                             </Link>
                         </IconButton>
                         <Typography variant='h5' style={{ flexGrow: 1 }}>

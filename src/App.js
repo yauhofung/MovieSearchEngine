@@ -5,7 +5,7 @@ import { Switch, Route, Link } from 'react-router-dom';
 
 
 import Navbar from './components/Navbar';
-import Test from './components/Test';
+import Test from './pages/AdvancedSearch';
 
 
 class App extends React.Component {
@@ -25,6 +25,10 @@ class App extends React.Component {
 							<Test />
 						</Route>
 						<Route path='/'>
+							<h3>Recommended movies go here: </h3>
+							{/* Grid here */}
+							<h3>Recent movies go here: </h3>
+							{/* Grid here too */}
 						</Route>
 					</Switch>
 

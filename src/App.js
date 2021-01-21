@@ -14,7 +14,7 @@ class App extends React.Component {
 		return (
 			<div>
 				<Navbar />
-				<Container style={{padding: '70px 0 0 0'}}>
+				<Container style={{ padding: '70px 0 15px 15px', background: "white"}}>
 
 					{/* The Link to='' */}
 
@@ -26,10 +26,13 @@ class App extends React.Component {
 						</Route>
 
 						<Route path='/'>
-							<h3>Recommended movies go here: </h3>
+							<h2>Recommended </h2>
 							{/* Grid here */}
-							<h3>Recent movies go here: </h3>
-							<Container style={{height:'6000px'}}>
+							<Container style={{height:'300px'}}>
+
+							</Container>
+							<h2>Recently Added </h2>
+							<Container style={{height:'4000px'}}>
 
 							</Container>
 							{/* Grid here too */}

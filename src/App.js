@@ -1,14 +1,12 @@
 import React from 'react';
 import { Container, Button } from '@material-ui/core';
+
+import { Switch, Route, Link } from 'react-router-dom';
+
+
 import Navbar from './components/Navbar';
-import SearchBar from './components/SearchBar';
-import {
-	Switch,
-	Route,
-	Link
-} from "react-router-dom";
-import Test from './Test';
-import KeyboardBackspaceIcon from '@material-ui/icons/KeyboardBackspace';
+import Test from './pages/AdvancedSearch';
+
 
 class App extends React.Component {
 
@@ -16,23 +14,26 @@ class App extends React.Component {
 		return (
 			<div>
 				<Navbar />
-				<Container>
+				<Container style={{padding: '70px 0 0 0'}}>
 
-					{/* The Link to="" */}
+					{/* The Link to='' */}
 
-					<Link to="/Test">
-						<Button style={{color: 'black', margin: '5px 0 0 5px' }}>
-							<KeyboardBackspaceIcon />
-						</Button>
-					</Link>
-					<SearchBar />
 
 					{/* The Switch */}
 					<Switch>
 						<Route path="/Test">
 							<Test />
 						</Route>
-						<Route path="/">
+
+						<Route path='/'>
+							<h3>Recommended movies go here: </h3>
+							{/* Grid here */}
+							<h3>Recent movies go here: </h3>
+							<Container style={{height:'6000px'}}>
+
+							</Container>
+							{/* Grid here too */}
+
 						</Route>
 					</Switch>
 

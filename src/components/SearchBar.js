@@ -27,14 +27,14 @@ class SearchBar extends React.Component {
 		return (
 			<Container>
 				<TextField
-					variant="filled"
-					label="Search Movie"
-					color="primary"
-					fullWidth="true"
+					variant='filled'
+					label='Search Movie'
+					color='primary'
+					fullWidth
 					style={{ margin: '0 0 10px 0' }}
 				/>
 
-				<Button color='primary' variant='contained' fullWidth='true'>
+				<Button color='primary' variant='contained' fullWidth>
 					Search
 				</Button>
 			</Container>

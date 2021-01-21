@@ -17,7 +17,7 @@ class App extends React.Component {
 				<Container>
 
 					{/* The Link to="" */}
-					<Link to="/Test">
+					<Link to='/Test'>
 						<Button style={{ color: 'black', margin: '5px 0 0 5px' }}>
 							<KeyboardBackspaceIcon />
 						</Button>
@@ -27,10 +27,10 @@ class App extends React.Component {
 
 					{/* The Switch */}
 					<Switch>
-						<Route path="/Test">
+						<Route path='/Test'>
 							<Test />
 						</Route>
-						<Route path="/">
+						<Route path='/'>
 						</Route>
 					</Switch>
 

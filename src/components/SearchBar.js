@@ -1,9 +1,8 @@
 import React from 'react';
+
 import { TextField, Container, Button } from '@material-ui/core';
 
-
 class SearchBar extends React.Component {
-
 	constructor(props) {
 		super(props)
 		this.state = {
@@ -49,12 +48,7 @@ class SearchBar extends React.Component {
 
 						/>
 
-						<Button
-							type='submit'
-							color='primary'
-							variant='contained'
-							style={{ height: '50px' }}
-						>
+						<Button type='submit' color='primary' variant='contained' style={{ height: '50px' }}>
 							Search
 						</Button>
 					</form>

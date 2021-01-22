@@ -1,17 +1,26 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
+import Card from '@material-ui/core/Card'
 import defaultImage from '../img/default-movie.png'
 
 const MoviePage = (props) => {
     return (
-    <Grid container>
+    <Grid container direction='row'>
         <Grid item>
-            {
-                props.image == null ? 
-                <img src={defaultImage} alt={'image unavailable'} /> : 
-                <img src={`http://image.tmdb.org/t/p/w200${props.image}`} alt={'card image'} />
-            }
+            <Card>
+                {
+                    props.image == null ? 
+                    <img src={defaultImage} alt={'image unavailable'} /> : 
+                    <img src={`http://image.tmdb.org/t/p/w200${props.image}`} alt={'card image'} />
+                }
+
+                <Typography>
+                    {
+                        props.title
+                    }
+                </Typography>
+            </Card>
         </Grid>
     </Grid>)
 

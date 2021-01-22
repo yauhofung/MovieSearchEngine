@@ -1,12 +1,11 @@
 import React from 'react';
 
-
 import { AppBar, Toolbar, IconButton, Typography, Button } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 
 import HomeIcon from '@material-ui/icons/Home';
-import SearchBar from './SearchBar';
 import SearchIcon from '@material-ui/icons/Search';
+import SearchBar from './SearchBar';
 
 class Navbar extends React.Component {
 	render() {
@@ -15,21 +14,22 @@ class Navbar extends React.Component {
 				<Toolbar>
 					<IconButton color='secondary' >
 						<Link to='/' color='primary'>
-							<HomeIcon style={{ color: 'white'}} />
+							<HomeIcon style={{ color: 'white' }} />
 						</Link>
 					</IconButton>
 
-					<Typography variant='h5' style={{ flexGrow: 1}}>
+					<Typography variant='h5' style={{ flexGrow: 1 }}>
 						Movie Search Engine
 					</Typography>
 
-                    <Link to='/Test'>
+					<Link to='/AdvancedSearch'>
 						<Button style={{ color: 'white', margin: '5px 0 0 5px' }}>
 							<SearchIcon /> Advanced Search
 						</Button>
 					</Link>
 
-                    <SearchBar />
+					<SearchBar />
+					
 					<Button color='secondary' variant='contained' >
 						Login
 					</Button>

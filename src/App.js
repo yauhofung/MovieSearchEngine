@@ -1,27 +1,21 @@
 import React from 'react';
+
 import { Container} from '@material-ui/core';
 import { Switch, Route} from 'react-router-dom';
 
 import Navbar from './components/Navbar';
-import Test from './pages/AdvancedSearch';
-
+import AdvancedSearch from './pages/AdvancedSearch';
 
 class App extends React.Component {
-
-
 	render() {
 		return (
 			<div>
 				<Navbar />
 				<Container style={{ padding: '90px 0 15px 15px', background: "white"}}>
-
-					{/* The Link to='' */}
-
-
 					{/* The Switch */}
 					<Switch>
-						<Route path="/Test">
-							<Test />
+						<Route path="/AdvancedSearch">
+							<AdvancedSearch />
 						</Route>
 
 						<Route path='/'>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, TextField } from '@material-ui/core';
 
-class Test extends React.Component {
+class AdvancedSearch extends React.Component {
 	render() {
 		return (
 			<div>
@@ -23,4 +23,4 @@ class Test extends React.Component {
 	}
 }
 
-export default Test;
+export default AdvancedSearch;

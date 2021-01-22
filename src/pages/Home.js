@@ -1,24 +1,32 @@
 import React from 'react';
 
-import { Container, Typography } from '@material-ui/core';
+import { Container, Grid, Typography } from '@material-ui/core';
 
 class Home extends React.Component {
 	render() {
 		return (
-			<>
-				<Typography variant='h5'>
-					Recommended
-				</Typography>
-				<Container style={{ height: '300px' }}>
-					Grid goes here
-				</Container>
-				<Typography variant='h5'>
-					Recently Added
-				</Typography>
-				<Container style={{ height: '4000px' }}>
-					Grid goes here
-				</Container>
-			</>
+			<Grid container spacing={1}>
+				<Grid item xs={12}>
+					<Typography variant='h5'>
+						Recommended
+					</Typography>
+				</Grid>
+				<Grid item xs={12}>
+					<Container style={{ height: '300px' }}>
+						Grid goes here
+					</Container>
+				</Grid>
+				<Grid item xs={12}>
+					<Typography variant='h5'>
+						Recently Added
+					</Typography>
+				</Grid>
+				<Grid item xs={12}>
+					<Container style={{ height: '4000px' }}>
+						Grid goes here
+					</Container>
+				</Grid>
+			</Grid>
 		);
 	}
 }

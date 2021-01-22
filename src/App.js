@@ -1,10 +1,11 @@
 import React from 'react';
 
-import { Card, CardContent, Container, Typography } from '@material-ui/core';
+import { Card, CardContent, Container } from '@material-ui/core';
 import { Switch, Route } from 'react-router-dom';
 
 import Navbar from './components/Navbar';
 import AdvancedSearch from './pages/AdvancedSearch';
+import Home from './pages/Home';
 
 class App extends React.Component {
 	render() {
@@ -22,18 +23,7 @@ class App extends React.Component {
 								</Route>
 								{/* Home Page */}
 								<Route path='/'>
-									<Typography variant='h5'>
-										Recommended
-									</Typography>
-									<Container style={{ height: '300px' }}>
-										Grid goes here
-									</Container>
-									<Typography variant='h5'>
-										Recently Added
-									</Typography>
-									<Container style={{ height: '4000px' }}>
-										Grid goes here
-									</Container>
+									<Home />
 								</Route>
 							</Switch>
 						</CardContent>

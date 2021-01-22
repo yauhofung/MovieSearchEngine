@@ -6,6 +6,8 @@ import { Switch, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import MovieList from './components/MovieList'
 import AdvancedSearch from './pages/AdvancedSearch';
+import MoviePage from './components/MoviePage'
+import Test from './pages/AdvancedSearch';
 
 class App extends React.Component {
 	render() {
@@ -17,6 +19,10 @@ class App extends React.Component {
 					<Switch>
 						<Route path="/AdvancedSearch">
 							<AdvancedSearch />
+						</Route>
+
+						<Route path='/MoviePage'>
+							<MoviePage />
 						</Route>
 
 						<Route path='/'>

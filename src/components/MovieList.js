@@ -4,6 +4,7 @@ import { Grid } from '@material-ui/core';
 import MoviePage from './MoviePage';
 
 const MovieList = (props) => {
+    return (
     <Grid container direction='row'>
         <Grid item direction='column' sm={12}>
             {
@@ -15,6 +16,7 @@ const MovieList = (props) => {
             }
         </Grid>
     </Grid>
+    );
 }
 
 export default MovieList;

@@ -20,6 +20,10 @@ class App extends React.Component {
 							<AdvancedSearch />
 						</Route>
 
+						<Route path='/MoviePage'>
+							<MoviePage />
+						</Route>
+
 						<Route path='/'>
 							<h2>Recommended </h2>
 							{/* Grid here */}
@@ -32,10 +36,6 @@ class App extends React.Component {
 							</Container>
 							{/* Grid here too */}
 
-						</Route>
-
-						<Route path='/MoviePage'>
-							<MoviePage />
 						</Route>
 					</Switch>
 

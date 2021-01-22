@@ -8,7 +8,7 @@ class Home extends React.Component {
 			<Grid container spacing={1}>
 				<Grid item xs={12}>
 					<Typography variant='h5'>
-						Recommended
+						Recommended Movies
 					</Typography>
 				</Grid>
 				<Grid item xs={12}>
@@ -18,7 +18,7 @@ class Home extends React.Component {
 				</Grid>
 				<Grid item xs={12}>
 					<Typography variant='h5'>
-						Recently Added
+						Recently Added Movies
 					</Typography>
 				</Grid>
 				<Grid item xs={12}>

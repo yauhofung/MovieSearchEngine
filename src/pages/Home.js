@@ -13,7 +13,7 @@ class Home extends React.Component {
 				</Grid>
 				<Grid item xs={12}>
 					<Container style={{ height: '300px' }}>
-						Grid goes here
+						(insert GridList)
 					</Container>
 				</Grid>
 				<Grid item xs={12}>
@@ -23,7 +23,7 @@ class Home extends React.Component {
 				</Grid>
 				<Grid item xs={12}>
 					<Container style={{ height: '4000px' }}>
-						Grid goes here
+						(insert GridList)
 					</Container>
 				</Grid>
 			</Grid>

@@ -11,7 +11,7 @@ class App extends React.Component {
 		return (
 			<div>
 				<Navbar />
-				<Container style={{ padding: '90px 0 15px 15px', background: "white" }}>
+				<Container style={{ padding: '90px 0 15px 15px' }}>
 					{/* The Switch */}
 					<Switch>
 						<Route path="/AdvancedSearch">

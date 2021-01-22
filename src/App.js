@@ -4,6 +4,7 @@ import { Container } from '@material-ui/core';
 import { Switch, Route } from 'react-router-dom';
 
 import Navbar from './components/Navbar';
+import MovieList from './components/MovieList'
 import AdvancedSearch from './pages/AdvancedSearch';
 
 class App extends React.Component {
@@ -32,6 +33,7 @@ class App extends React.Component {
 
 						</Route>
 					</Switch>
+					<MovieList movies={this.state.movies} />
 
 				</Container>
 			</div>

@@ -12,9 +12,9 @@ class App extends React.Component {
 			<>
 				<Navbar />
 				<Container>
-					{/* Switch */}
 					<Card variant='outlined'>
 						<CardContent>
+							{/* Switch */}
 							<Switch>
 								{/* Advanced Search Page */}
 								<Route path="/AdvancedSearch">

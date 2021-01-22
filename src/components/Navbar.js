@@ -29,7 +29,7 @@ class Navbar extends React.Component {
 					</Link>
 
 					<SearchBar />
-					
+
 					<Button color='secondary' variant='contained' >
 						Login
 					</Button>

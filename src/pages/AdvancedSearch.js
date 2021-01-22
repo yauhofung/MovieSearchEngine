@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Button, Grid, TextField } from '@material-ui/core';
+import { Button, Grid, TextField, Typography } from '@material-ui/core';
 
 class AdvancedSearch extends React.Component {
 	// calls TMDb API with advanced searches
@@ -11,6 +11,11 @@ class AdvancedSearch extends React.Component {
 		return (
 			<form onSubmit={(event) => { this.submitForm(event); }}>
 				<Grid container spacing={1}>
+					<Grid item xs={12}>
+						<Typography variant='h5' align='center'>
+							Advanced Search
+						</Typography>
+					</Grid>
 					<Grid item xs={12} md={6}>
 						<TextField
 							variant='outlined'

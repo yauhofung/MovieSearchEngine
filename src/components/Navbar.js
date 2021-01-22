@@ -10,7 +10,7 @@ import SearchBar from './SearchBar';
 class Navbar extends React.Component {
 	render() {
 		return (
-			<AppBar position='fixed' color='primary'>
+			<AppBar position='sticky' color='primary'>
 				<Toolbar>
 					<IconButton color='secondary' >
 						<Link to='/' color='primary'>

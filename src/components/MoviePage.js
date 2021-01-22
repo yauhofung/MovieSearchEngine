@@ -8,18 +8,10 @@ const MoviePage = (props) => {
     <Grid container>
         <Grid item>
             {
-                props.image == null ? <img src={defaultImage} alt={'card image'} /> : <img src={`http://image.tmdb.org/t/p/w185${props.image}`} alt={'card image'} />
+                props.image == null ? 
+                <img src={defaultImage} alt={'image unavailable'} /> : 
+                <img src={`http://image.tmdb.org/t/p/w200${props.image}`} alt={'card image'} />
             }
-        </Grid>
-
-        <Grid item>
-            
-        </Grid>
-
-        <Grid item>
-            <Typography variant='body'>
-                
-            </Typography>
         </Grid>
     </Grid>)
 

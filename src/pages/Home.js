@@ -1,11 +1,17 @@
 import React from 'react';
 
 import { Container, Grid, Typography } from '@material-ui/core';
+import MovieList from '../components/MovieList';
 
 class Home extends React.Component {
+
 	render() {
 		return (
 			<Grid container spacing={1}>
+				<Grid item xs={12}>
+					<MovieList movies={this.props.movies}  />
+				</Grid>
+
 				<Grid item xs={12}>
 					<Typography variant='h5'>
 						Recommended Movies

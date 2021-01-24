@@ -23,7 +23,7 @@ class App extends React.Component {
 								</Route>
 								{/* Home Page */}
 								<Route path='/'>
-									<Home />
+									<Home movies={this.props.movies} />
 								</Route>
 							</Switch>
 						</CardContent>

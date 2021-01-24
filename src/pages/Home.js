@@ -9,9 +9,8 @@ class Home extends React.Component {
 		return (
 			<Grid container spacing={1}>
 				<Grid item xs={12}>
-					<MovieList movies={this.props.movies}  />
+					<MovieList movies={this.props.movies} />
 				</Grid>
-
 				<Grid item xs={12}>
 					<Typography variant='h5'>
 						Recommended Movies

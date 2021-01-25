@@ -23,7 +23,7 @@ class SearchBar extends React.Component {
 		event.preventDefault();
 		console.log(`${this.state.search}`)
 		/*console.log(`${this.state.title}`)*/
-		document.write("You searched for: " + `${this.state.search}`)
+		document.write(`You searched for: ${this.state.search}`)
 		
 		document.write("<br> Here are the results: ")
 

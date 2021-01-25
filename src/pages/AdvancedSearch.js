@@ -1,10 +1,9 @@
 import React from 'react';
+
 import { Typography, Grid, TextField, Container, Button } from '@material-ui/core';
+
 import MovieList from '../components/MovieList';
 import Pagination from '../components/Pagination';
-import NestedGrid from '../components/NestedGrid';
-
-
 
 class AdvancedSearch extends React.Component {
 
@@ -89,7 +88,7 @@ class AdvancedSearch extends React.Component {
 							<Grid item xs={12}>
 								<Typography variant='h5' align='center'>
 									Advanced Search
-						</Typography>
+								</Typography>
 							</Grid>
 							<Grid item xs={12} md={6}>
 								<TextField
@@ -126,7 +125,7 @@ class AdvancedSearch extends React.Component {
 							<Grid item xs={12}>
 								<Button type='submit' color="primary" variant='contained' fullWidth>
 									Search
-						</Button>
+								</Button>
 							</Grid>
 						</Grid>
 					</form>

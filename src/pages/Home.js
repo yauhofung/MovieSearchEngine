@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Button, Container, Grid, Typography } from '@material-ui/core';
+import { Container, Grid, Typography } from '@material-ui/core';
 
 class Home extends React.Component {
 

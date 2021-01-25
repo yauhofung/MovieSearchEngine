@@ -1,4 +1,5 @@
 import React from 'react';
+import MovieList from '../components/MovieList';
 
 import { Container, Grid, Typography } from '@material-ui/core';
 
@@ -9,6 +10,7 @@ class Home extends React.Component {
 				<Grid item xs={12}>
 					<Typography variant='h5'>
 						Recommended Movies
+						<MovieList/>
 					</Typography>
 				</Grid>
 				<Grid item xs={12}>
@@ -26,6 +28,7 @@ class Home extends React.Component {
 						(insert GridList)
 					</Container>
 				</Grid>
+
 			</Grid>
 		);
 	}

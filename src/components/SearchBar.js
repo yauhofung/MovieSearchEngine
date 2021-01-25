@@ -83,7 +83,7 @@ class SearchBar extends React.Component {
 						</Button>
 					</form>
 				</Container>
-				
+
 				<MovieList movies={this.state.movies} />
 			</div>
 		);

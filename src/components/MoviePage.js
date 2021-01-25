@@ -23,7 +23,7 @@ const MoviePage = (props) => {
 					<Grid item xs></Grid>
 				</Grid>
 
-				<Typography align='center'>
+				<Typography variant='h6' noWrap='true' align='center'>
 					{props.title}
 				</Typography>
 			</CardContent>

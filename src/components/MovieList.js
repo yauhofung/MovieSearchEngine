@@ -4,7 +4,7 @@ import MoviePage from './MoviePage';
 
 const MovieList = (props) => {
 	return (
-		<Grid container>
+		<Grid container spacing={1}>
 			{
 				props.movies.map((movie, i) => {
 					return (

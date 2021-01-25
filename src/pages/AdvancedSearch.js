@@ -1,6 +1,9 @@
 import React from 'react';
 import { Typography, Grid, TextField, Container, Button } from '@material-ui/core';
 import MovieList from '../components/MovieList';
+import Pagination from '../components/Pagination';
+import NestedGrid from '../components/NestedGrid';
+
 
 
 class AdvancedSearch extends React.Component {
@@ -42,20 +45,20 @@ class AdvancedSearch extends React.Component {
 		})
 	}
 
-	// nextPage = (pageNumber) => {
-	// 	fetch(`https://api.themoviedb.org/3/search/movie?api_key=${this.apiKey}&query=${this.state.search}&page=${pageNumber}`)
-	// 		.then(data => data.json())
-	// 		.then(data => {
-	// 			// where it logs the data
-	// 			console.log(data);
-	// 			// sets the movies array to all the results
-	// 			this.setState({ movies: [...data.results], currentPage: pageNumber })
-	// 		})
-	// }
+	nextPage = (pageNumber) => {
+		fetch(`https://api.themoviedb.org/3/search/movie?api_key=${this.apiKey}&query=${this.state.search}&page=${pageNumber}`)
+			.then(data => data.json())
+			.then(data => {
+				// where it logs the data
+				console.log(data);
+				// sets the movies array to all the results
+				this.setState({ movies: [...data.results], currentPage: pageNumber })
+			})
+	}
 
 
 	render() {
-
+		const numberPage = Math.floor(this.state.totalResults / 20)
 		return (
 			<div>
 				<Container>
@@ -82,54 +85,56 @@ class AdvancedSearch extends React.Component {
 						>
 							Search
 						</Button>
-                        <Grid container spacing={1}>
-					<Grid item xs={12}>
-						<Typography variant='h5' align='center'>
-							Advanced Search
+						<Grid container spacing={1}>
+							<Grid item xs={12}>
+								<Typography variant='h5' align='center'>
+									Advanced Search
 						</Typography>
-					</Grid>
-					<Grid item xs={12} md={6}>
-						<TextField
-							variant='outlined'
-							label='Title'
-							placeholder='Enter movie title'
-							fullWidth
-						/>
-					</Grid>
-					<Grid item xs={12} md={6}>
-						<TextField
-							variant='outlined'
-							label='Genre'
-							placeholder='Enter movie genre'
-							fullWidth
-						/>
-					</Grid>
-					<Grid item xs={12} md={6}>
-						<TextField
-							variant='outlined'
-							label='Release Year'
-							placeholder='Enter movie release year'
-							fullWidth
-						/>
-					</Grid>
-					<Grid item xs={12} md={6}>
-						<TextField
-							variant='outlined'
-							label='ID'
-							placeholder='Enter movie ID'
-							fullWidth
-						/>
-					</Grid>
-					<Grid item xs={12}>
-						<Button type='submit' color="primary" variant='contained' fullWidth>
-							Search
+							</Grid>
+							<Grid item xs={12} md={6}>
+								<TextField
+									variant='outlined'
+									label='Title'
+									placeholder='Enter movie title'
+									fullWidth
+								/>
+							</Grid>
+							<Grid item xs={12} md={6}>
+								<TextField
+									variant='outlined'
+									label='Genre'
+									placeholder='Enter movie genre'
+									fullWidth
+								/>
+							</Grid>
+							<Grid item xs={12} md={6}>
+								<TextField
+									variant='outlined'
+									label='Release Year'
+									placeholder='Enter movie release year'
+									fullWidth
+								/>
+							</Grid>
+							<Grid item xs={12} md={6}>
+								<TextField
+									variant='outlined'
+									label='ID'
+									placeholder='Enter movie ID'
+									fullWidth
+								/>
+							</Grid>
+							<Grid item xs={12}>
+								<Button type='submit' color="primary" variant='contained' fullWidth>
+									Search
 						</Button>
-					</Grid>
-				</Grid>
+							</Grid>
+						</Grid>
 					</form>
+					<MovieList movies={this.state.movies} />
+					{this.state.totalResults > 25 ? <Pagination pages={numberPage} nextPage={this.nextPage} currentPage={this.state.currentPage} /> : ''}
 				</Container>
-				
-				<MovieList movies={this.state.movies} />
+				<br></br>
+
 			</div>
 		);
 	}

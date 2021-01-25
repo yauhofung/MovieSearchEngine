@@ -22,11 +22,18 @@ class SearchBar extends React.Component {
 	handleSubmit = (event) => {
 		event.preventDefault();
 		console.log(`${this.state.search}`)
+		/*console.log(`${this.state.title}`)*/
+		document.write("You searched for: " + `${this.state.search}`)
+		
+		document.write("<br> Here are the results: ")
+
 
 		fetch(`https://api.themoviedb.org/3/search/movie?api_key=${this.apiKey}&query=${this.state.search}`)
 			.then(data => data.json())
 			.then(data => {
 				console.log(data);
+				document.write(data.results);
+				
 				this.setState({ movies: [...data.results] })
 			})
 	}
@@ -51,7 +58,9 @@ class SearchBar extends React.Component {
 						<Button type='submit' color='primary' variant='contained' style={{ height: '50px' }}>
 							Search
 						</Button>
+					
 					</form>
+					
 				</Container>
 			</div>
 		);

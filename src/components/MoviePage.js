@@ -17,7 +17,7 @@ const MoviePage = (props) => {
 
                         <Typography>
                             {
-                                this.props.title
+                                props.title
                             }
                         </Typography>
                     </Card>

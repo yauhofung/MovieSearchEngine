@@ -20,11 +20,9 @@ const Pagination = (props) => {
 	}
 
 	return (
-		<Grid container spacing={1}>
-			<Grid container item xs={12} spacing={3}>
-				<Grid item xs={4}>
-					{pageLinks}
-				</Grid>
+		<Grid container>
+			<Grid item xs={1}>
+				{pageLinks}
 			</Grid>
 		</Grid>
 	)

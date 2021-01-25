@@ -5,7 +5,7 @@ import MoviePage from './MoviePage';
 const MovieList = (props) => {
 	return (
 		<Grid container>
-			<Grid item xs={12} sm={6} md={4} lg={3} xl={2}>
+			<Grid item xs={12} sm={6} md={4} lg={3}>
 				{
 					props.movies.map((movie, i) => {
 						return (

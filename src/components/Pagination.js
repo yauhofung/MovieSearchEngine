@@ -10,18 +10,44 @@ const Pagination = (props) => {
 
 		pageLinks.push(
 			<Grid
-				className={`waves-effect' ${active}`}
+				className={`waves-effect ${active}`}
+				direction="row"
+				alignItems="right"
 				key={i}
 				onClick={() => props.nextPage(i)}>
 				<Button href="#">
 					{i}
 				</Button>
+
+			
+				|<Button href="#">
+					{i+1}
+				</Button>
+
+				|<Button href="#">
+					{i+2}
+				</Button>
+
+			
+				|<Button href="#">
+					{i+3}
+				</Button>
+
+				|<Button href="#">
+					{i+4}
+				</Button>
+
+
 			</Grid>)
 	}
 
 	return (
-		<Grid container>
-			<Grid item xs={1}>
+		<Grid 
+		container
+		direction="row"
+		alignItems="center"
+		spacing={2}>
+			<Grid container item xs={12} sm={12}>
 				{pageLinks}
 			</Grid>
 		</Grid>

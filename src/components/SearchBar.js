@@ -37,6 +37,7 @@ class SearchBar extends React.Component {
 	handleSearchChange = (event) => {
 		// changes the textfield whenever text is typed in
 		this.setState({
+			//assigning search each letter when inputed
 			search: event.target.value
 		})
 	}
@@ -83,7 +84,7 @@ class SearchBar extends React.Component {
 						</Button>
 					</form>
 				</Container>
-
+				
 				<MovieList movies={this.state.movies} />
 			</div>
 		);

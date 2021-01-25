@@ -6,23 +6,25 @@ import defaultImage from '../img/default-movie.png';
 
 const MoviePage = (props) => {
     return (
-        <Grid container direction='row'>
-            <Grid item>
-                <Card>
-                    {
-                        // if image prop is null: 
-                        props.image == null ?
-                            // return image default or return the image api prop
-                            <img src={defaultImage} alt={'image unavailable'} /> :
-                            <img src={`http://image.tmdb.org/t/p/w200${props.image}`} alt={'card image'} />
-                    }
+    <Grid container direction='row'>
+        <Grid item>
+            <Card>
+                {
+                    //if props image is null:
+                    props.image == null ? 
+                    //show the default image or the api's image prop.
+                    <img src={defaultImage} alt={'image unavailable'} /> : 
+                    <img src={`http://image.tmdb.org/t/p/w200${props.image}`} alt={'card image'} />
+                }
 
-                    <Typography>
-                        {props.title}
-                    </Typography>
-                </Card>
-            </Grid>
-        </Grid>)
+                {/* displaying the card */}
+                <Typography>
+                    { props.title }
+                </Typography>
+
+            </Card>
+        </Grid>
+    </Grid>)
 
 }
 

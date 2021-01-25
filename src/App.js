@@ -21,6 +21,7 @@ class App extends React.Component {
 								<Route path="/AdvancedSearch">
 									<AdvancedSearch />
 								</Route>
+
 								{/* Home Page */}
 								<Route path='/'>
 									<Home />

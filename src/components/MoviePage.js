@@ -7,7 +7,9 @@ import defaultImage from '../img/default-movie.png';
 
 const MoviePage = (props) => {
 const style = {
-	"height" : "289px"
+	poster : {
+		"height" : "289px"
+	},
 } 
 	return (
 		<Card>
@@ -21,7 +23,7 @@ const style = {
 							props.image === null ?
 								//show the default image or the api's image prop.
 								<img src={defaultImage} alt={'unavailable movie poster'} style={style}/> :
-								<img src={`http://image.tmdb.org/t/p/w200${props.image}`} alt={'card movie poster'} style={style} />
+								<img src={`http://image.tmdb.org/t/p/w200${props.image}`} alt={'card movie poster'} style={style.poster} />
 						}
 					</Grid>
 					<Grid item xs></Grid>
@@ -31,9 +33,11 @@ const style = {
 					{props.title}
 				</Typography>
 
-				<Box component='fieldset' borderColor='transparent'>
-					<Rating value={props.rating / 2} readOnly />
-				</Box>
+				<Grid container>
+					<Grid item direction='row' justify='center'>
+						<Rating value={props.rating / 2} readOnly />
+					</Grid>
+				</Grid>
 			</CardContent>
 		</Card>
 	);

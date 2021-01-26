@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { Container, Grid, Typography } from '@material-ui/core';
+import MovieList from '../components/MovieList';
 
 class Home extends React.Component {
 
@@ -8,7 +9,9 @@ class Home extends React.Component {
 		return (
 			<Grid container spacing={1}>
 				<Grid item xs={12}>
-
+					<MovieList movies={this.props.movies} />
+				</Grid>
+				<Grid item xs={12}>
 					<Typography variant='h5'>
 						Recommended Movies
 						{/* Recommended movies should store genres and then pass them into the api. We want it limited too, however. */}

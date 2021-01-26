@@ -2,7 +2,6 @@ import React from 'react';
 import { TextField, Container, Button } from '@material-ui/core';
 import MovieList from './MovieList';
 
-
 class SearchBar extends React.Component {
 
 	constructor(props) {
@@ -84,7 +83,6 @@ class SearchBar extends React.Component {
 						</Button>
 					</form>
 				</Container>
-				
 				<MovieList movies={this.state.movies} />
 			</div>
 		);

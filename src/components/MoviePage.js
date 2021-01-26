@@ -47,7 +47,10 @@ const style = {
 
 				<Grid container>
 					<Grid item direction='row' justify='center'>
-						<Rating value={props.rating / 2} readOnly />
+						<Rating
+							value={props.rating / 2}
+							readOnly
+						/>
 					</Grid>
 				</Grid>
 			</CardContent>

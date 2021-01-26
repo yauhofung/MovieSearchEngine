@@ -1,6 +1,7 @@
 import React from 'react';
 
-import { Grid, Typography, Card, CardContent } from '@material-ui/core';
+import { Grid, Typography, Card, CardContent, Box } from '@material-ui/core';
+import { Rating } from '@material-ui/lab';
 
 import defaultImage from '../img/default-movie.png';
 
@@ -29,6 +30,10 @@ const style = {
 				<Typography variant='h6' noWrap='true' align='center'>
 					{props.title}
 				</Typography>
+
+				<Box component='fieldset' borderColor='transparent'>
+					<Rating value={props.rating / 2} readOnly />
+				</Box>
 			</CardContent>
 		</Card>
 	);

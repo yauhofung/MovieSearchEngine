@@ -11,7 +11,7 @@ class MovieList extends React.Component {
 						return (
 							<Grid item xs={12} sm={6} md={4} lg={3}>
 								{/* passing in props to MoviePage component */}
-								<MoviePage key={i} title={movie.title} image={movie.poster_path} />
+								<MoviePage key={i} title={movie.title} image={movie.poster_path} rating={movie.vote_average} />
 							</Grid>
 						);
 					})

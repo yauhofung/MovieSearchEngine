@@ -1,9 +1,10 @@
 import React from 'react';
+
 import { TextField, Container, Button } from '@material-ui/core';
+
 import MovieList from './MovieList';
 
 class SearchBar extends React.Component {
-
 	constructor(props) {
 		super(props)
 		this.state = {
@@ -15,12 +16,8 @@ class SearchBar extends React.Component {
 		this.apiKey = process.env.REACT_APP_API
 	}
 
-
 	handleSubmit = (event) => {
 		event.preventDefault();
-
-		// logs the input
-		console.log(`${this.state.search}`)
 
 		// fetching from the api
 		fetch(`https://api.themoviedb.org/3/search/movie?api_key=${this.apiKey}&query=${this.state.search}`)
@@ -35,18 +32,12 @@ class SearchBar extends React.Component {
 
 	handleSearchChange = (event) => {
 		// changes the textfield whenever text is typed in
-
-		
-		if(event.target.value.length < 100){
+		if (event.target.value.length < 100) {
 			this.setState({
 				//assigning search each letter when inputed
 				search: event.target.value
-
-			})
+			});
 		}
-
-
-		
 	}
 
 	// nextPage = (pageNumber) => {
@@ -62,7 +53,6 @@ class SearchBar extends React.Component {
 
 
 	render() {
-
 		return (
 			<div>
 				<Container>
@@ -75,7 +65,7 @@ class SearchBar extends React.Component {
 							type="text"
 							value={this.state.search}
 							// hooks to onChange
-							onChange={(event) => {this.handleSearchChange(event);}}
+							onChange={(event) => { this.handleSearchChange(event); }}
 							size="small"
 							style={{ backgroundColor: 'white' }}
 

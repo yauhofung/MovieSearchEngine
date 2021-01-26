@@ -4,6 +4,7 @@ import { Typography, Grid, TextField, Container, Button } from '@material-ui/cor
 
 import MovieList from '../components/MovieList';
 import Pagination from '../components/Pagination';
+import SearchBar from '../components/SearchBar';
 
 class AdvancedSearch extends React.Component {
 
@@ -38,10 +39,15 @@ class AdvancedSearch extends React.Component {
 
 	handleSearchChange = (event) => {
 		// changes the textfield whenever text is typed in
-		this.setState({
-			//assigning search each letter when inputed
-			search: event.target.value
-		})
+
+	if(event.target.value.length < 100){
+			this.setState({
+				//assigning search each letter when inputed
+				search: event.target.value
+
+			})
+		}
+
 	}
 
 	nextPage = (pageNumber) => {
@@ -70,7 +76,7 @@ class AdvancedSearch extends React.Component {
 							type="text"
 							value={this.state.search}
 							// hooks to onChange
-							onChange={this.handleSearchChange}
+							onChange={(event) => {this.handleSearchChange(event);}}
 							size="small"
 							style={{ backgroundColor: 'white' }}
 

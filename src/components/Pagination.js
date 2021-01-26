@@ -9,21 +9,25 @@ const Pagination = (props) => {
 		let active = props.currentPage === i ? 'active' : '';
 
 		pageLinks.push(
-			<Grid className={`waves-effect ${active}`} direction="row" alignItems="right" key={i} onClick={() => props.nextPage(i)}>
+			<Grid
+				key={i}
+				className={`waves-effect ${active}`}
+				onClick={() => props.nextPage(i)}
+			>
 				<Button href="#">
 					{i}
 				</Button>
 			</Grid>
-		)
+		);
 	}
 
 	return (
-		<Grid container direction="row" alignItems="center" spacing={2}>
-			<Grid container item xs={12} sm={12}>
+		<Grid container spacing={2}>
+			<Grid container item xs={12}>
 				{pageLinks}
 			</Grid>
 		</Grid>
-	)
+	);
 }
 
 export default Pagination;

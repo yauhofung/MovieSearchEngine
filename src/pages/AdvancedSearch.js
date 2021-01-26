@@ -4,10 +4,8 @@ import { Typography, Grid, TextField, Container, Button } from '@material-ui/cor
 
 import MovieList from '../components/MovieList';
 import Pagination from '../components/Pagination';
-import SearchBar from '../components/SearchBar';
 
 class AdvancedSearch extends React.Component {
-
 	constructor(props) {
 		super(props)
 		this.state = {
@@ -19,19 +17,13 @@ class AdvancedSearch extends React.Component {
 		this.apiKey = process.env.REACT_APP_API
 	}
 
-
 	handleSubmit = (event) => {
 		event.preventDefault();
-
-		// logs the input
-		console.log(`${this.state.search}`)
 
 		// fetching from the api
 		fetch(`https://api.themoviedb.org/3/search/movie?api_key=${this.apiKey}&query=${this.state.search}`)
 			.then(data => data.json())
 			.then(data => {
-				// where it logs the data
-				console.log(data);
 				// sets the movies array to all the results
 				this.setState({ movies: [...data.results], totalResults: data.total_results })
 			})
@@ -39,15 +31,12 @@ class AdvancedSearch extends React.Component {
 
 	handleSearchChange = (event) => {
 		// changes the textfield whenever text is typed in
-
-	if(event.target.value.length < 100){
+		if (event.target.value.length < 100) {
 			this.setState({
 				//assigning search each letter when inputed
 				search: event.target.value
-
-			})
+			});
 		}
-
 	}
 
 	nextPage = (pageNumber) => {
@@ -61,86 +50,94 @@ class AdvancedSearch extends React.Component {
 			})
 	}
 
-
 	render() {
 		const numberPage = Math.floor(this.state.totalResults / 20)
 		return (
-			<div>
-				<Container>
-					{/* Hooks to handleSubmit */}
-					<form onSubmit={this.handleSubmit}>
-						<TextField
-							variant="filled"
-							label="Search Movie"
-							color="primary"
-							type="text"
-							value={this.state.search}
-							// hooks to onChange
-							onChange={(event) => {this.handleSearchChange(event);}}
-							size="small"
-							style={{ backgroundColor: 'white' }}
+			<Container>
+				{/* Hooks to handleSubmit */}
+				<form onSubmit={this.handleSubmit}>
+					<TextField
+						variant="filled"
+						label="Search Movie"
+						color="primary"
+						type="text"
+						value={this.state.search}
+						// hooks to onChange
+						onChange={(event) => { this.handleSearchChange(event); }}
+						size="small"
+						style={{ backgroundColor: 'white' }}
 
-						/>
+					/>
+					<Button
+						type='submit'
+						color='primary'
+						variant='contained'
+						style={{ height: '50px' }}
+					>
+						Search
+					</Button>
 
-						<Button
-							type='submit'
-							color='primary'
-							variant='contained'
-							style={{ height: '50px' }}
-						>
-							Search
-						</Button>
-						<Grid container spacing={1}>
-							<Grid item xs={12}>
-								<Typography variant='h5' align='center'>
-									Advanced Search
-								</Typography>
-							</Grid>
-							<Grid item xs={12} md={6}>
-								<TextField
-									variant='outlined'
-									label='Title'
-									placeholder='Enter movie title'
-									fullWidth
-								/>
-							</Grid>
-							<Grid item xs={12} md={6}>
-								<TextField
-									variant='outlined'
-									label='Genre'
-									placeholder='Enter movie genre'
-									fullWidth
-								/>
-							</Grid>
-							<Grid item xs={12} md={6}>
-								<TextField
-									variant='outlined'
-									label='Release Year'
-									placeholder='Enter movie release year'
-									fullWidth
-								/>
-							</Grid>
-							<Grid item xs={12} md={6}>
-								<TextField
-									variant='outlined'
-									label='ID'
-									placeholder='Enter movie ID'
-									fullWidth
-								/>
-							</Grid>
-							<Grid item xs={12}>
-								<Button type='submit' color="primary" variant='contained' fullWidth>
-									Search
-								</Button>
-							</Grid>
+					<Grid container spacing={1}>
+						<Grid item xs={12}>
+							<Typography variant='h5' align='center'>
+								Advanced Search
+							</Typography>
 						</Grid>
-					</form>
-					<MovieList movies={this.state.movies} />
-					{this.state.totalResults > 25 ? <Pagination pages={numberPage} nextPage={this.nextPage} currentPage={this.state.currentPage} /> : ''}
-				</Container>
-				<br></br>
-
-			</div>
+						<Grid item xs={12} md={6}>
+							<TextField
+								variant='outlined'
+								label='Title'
+								placeholder='Enter movie title'
+								fullWidth
+							/>
+						</Grid>
+						<Grid item xs={12} md={6}>
+							<TextField
+								variant='outlined'
+								label='Genre'
+								placeholder='Enter movie genre'
+								fullWidth
+							/>
+						</Grid>
+						<Grid item xs={12} md={6}>
+							<TextField
+								variant='outlined'
+								label='Release Year'
+								placeholder='Enter movie release year'
+								fullWidth
+							/>
+						</Grid>
+						<Grid item xs={12} md={6}>
+							<TextField
+								variant='outlined'
+								label='ID'
+								placeholder='Enter movie ID'
+								fullWidth
+							/>
+						</Grid>
+						<Grid item xs={12}>
+							<Button
+								type='submit'
+								color="primary"
+								variant='contained'
+								fullWidth
+							>
+								Search
+							</Button>
+						</Grid>
+					</Grid>
+				</form>
+				<MovieList movies={this.state.movies} />
+				{
+					this.state.totalResults > 25 ?
+						<Pagination
+							pages={numberPage}
+							nextPage={this.nextPage}
+							currentPage={this.state.currentPage}
+						/> :
+						<></>
+				}
+			</Container>
 		);
 	}
 }

@@ -5,9 +5,9 @@ import { Grid, Typography, Card, CardContent } from '@material-ui/core';
 import defaultImage from '../img/default-movie.png';
 
 const MoviePage = (props) => {
-const style = {
-	"height" : "289px"
-} 
+	const style = {
+		"height": "289px"
+	}
 	return (
 		<Card>
 			<CardContent>
@@ -19,14 +19,26 @@ const style = {
 							//if props image is null:
 							props.image === null ?
 								//show the default image or the api's image prop.
-								<img src={defaultImage} alt={'unavailable movie poster'} style={style}/> :
-								<img src={`http://image.tmdb.org/t/p/w200${props.image}`} alt={'card movie poster'} style={style} />
+								<img
+									src={defaultImage}
+									alt={'unavailable movie poster'}
+									style={style}
+								/> :
+								<img
+									src={`http://image.tmdb.org/t/p/w200${props.image}`}
+									alt={'card movie poster'}
+									style={style}
+								/>
 						}
 					</Grid>
 					<Grid item xs></Grid>
 				</Grid>
 
-				<Typography variant='h6' noWrap='true' align='center'>
+				<Typography
+					variant='h6'
+					align='center'
+					noWrap
+				>
 					{props.title}
 				</Typography>
 			</CardContent>

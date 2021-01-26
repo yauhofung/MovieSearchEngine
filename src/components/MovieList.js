@@ -11,7 +11,7 @@ class MovieList extends React.Component {
 				{
 					this.props.movies.map((movie, i) => {
 						return (
-							<Grid item xs={12} sm={6} md={4} lg={3}>
+							<Grid key={i} item xs={12} sm={6} md={4} lg={3}>
 								{/* passing in props to MoviePage component */}
 								<MoviePage
 									key={i}

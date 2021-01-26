@@ -20,15 +20,10 @@ class AdvancedSearch extends React.Component {
 	handleSubmit = (event) => {
 		event.preventDefault();
 
-		// logs the input
-		console.log(`${this.state.search}`)
-
 		// fetching from the api
 		fetch(`https://api.themoviedb.org/3/search/movie?api_key=${this.apiKey}&query=${this.state.search}`)
 			.then(data => data.json())
 			.then(data => {
-				// where it logs the data
-				console.log(data);
 				// sets the movies array to all the results
 				this.setState({ movies: [...data.results], totalResults: data.total_results })
 			})
@@ -40,8 +35,7 @@ class AdvancedSearch extends React.Component {
 			this.setState({
 				//assigning search each letter when inputed
 				search: event.target.value
-
-			})
+			});
 		}
 	}
 
@@ -134,7 +128,15 @@ class AdvancedSearch extends React.Component {
 					</Grid>
 				</form>
 				<MovieList movies={this.state.movies} />
-				{this.state.totalResults > 25 ? <Pagination pages={numberPage} nextPage={this.nextPage} currentPage={this.state.currentPage} /> : ''}
+				{
+					this.state.totalResults > 25 ?
+						<Pagination
+							pages={numberPage}
+							nextPage={this.nextPage}
+							currentPage={this.state.currentPage}
+						/> :
+						<></>
+				}
 			</Container>
 		);
 	}

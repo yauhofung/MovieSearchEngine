@@ -23,8 +23,6 @@ class SearchBar extends React.Component {
 		fetch(`https://api.themoviedb.org/3/search/movie?api_key=${this.apiKey}&query=${this.state.search}`)
 			.then(data => data.json())
 			.then(data => {
-				// where it logs the data
-				console.log(data);
 				// sets the movies array to all the results
 				this.setState({ movies: [...data.results], totalResults: data.total_results })
 			})

@@ -12,31 +12,15 @@ const Pagination = (props) => {
 			<Grid
 				className={`waves-effect ${active}`}
 				direction="row"
-				alignItems="right"
+				justify="center"
+				alignItems="center"
+				
+
 				key={i}
 				onClick={() => props.nextPage(i)}>
 				<Button href="#">
 					{i}
 				</Button>
-
-			
-				|<Button href="#">
-					{i+1}
-				</Button>
-
-				|<Button href="#">
-					{i+2}
-				</Button>
-
-			
-				|<Button href="#">
-					{i+3}
-				</Button>
-
-				|<Button href="#">
-					{i+4}
-				</Button>
-
 
 			</Grid>)
 	}
@@ -45,7 +29,10 @@ const Pagination = (props) => {
 		<Grid 
 		container
 		direction="row"
+		justify="center"
 		alignItems="center"
+		
+
 		spacing={2}>
 			<Grid container item xs={12} sm={12}>
 				{pageLinks}

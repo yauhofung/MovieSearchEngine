@@ -17,6 +17,7 @@ class MovieList extends React.Component {
 									key={i}
 									title={movie.title}
 									image={movie.poster_path}
+									rating={movie.vote_average}
 								/>
 							</Grid>
 						);

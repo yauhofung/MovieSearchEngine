@@ -14,6 +14,7 @@ class Home extends React.Component {
 				<Grid item xs={12}>
 					<Typography variant='h5'>
 						Recommended Movies
+						{/* Recommended movies should store genres and then pass them into the api. We want it limited too, however. */}
 					</Typography>
 				</Grid>
 				<Grid item xs={12}>
@@ -24,6 +25,7 @@ class Home extends React.Component {
 				<Grid item xs={12}>
 					<Typography variant='h5'>
 						Recently Added Movies
+						{/* This one shouldn't be too hard, provided that movieDB has a search by release date */}
 					</Typography>
 				</Grid>
 				<Grid item xs={12}>
@@ -31,6 +33,7 @@ class Home extends React.Component {
 						(insert GridList)
 					</Container>
 				</Grid>
+
 			</Grid>
 		);
 	}

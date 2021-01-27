@@ -44,7 +44,7 @@ class AdvancedSearch extends React.Component {
 			.then(data => data.json())
 			.then(data => {
 				// where it logs the data
-				console.log(data);
+				// console.log(data);
 				// sets the movies array to all the results
 				this.setState({ movies: [...data.results], currentPage: pageNumber })
 			})

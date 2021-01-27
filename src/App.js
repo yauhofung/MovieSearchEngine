@@ -15,7 +15,7 @@ class App extends React.Component {
 			<>
 				<Navbar />
 				<Container>
-					<Hidden mdUp>
+					<Hidden smUp>
 						<Link to='/AdvancedSearch'>
 							<Button style={{ color: 'primary', margin: '5px 0 0 5px' }}>
 								<SearchIcon /> Advanced Search

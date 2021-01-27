@@ -4,7 +4,6 @@ import { TextField, Container, Button } from '@material-ui/core';
 import { withRouter } from 'react-router-dom';
 
 class SearchBar extends React.Component {
-
 	constructor(props) {
 		super(props)
 		this.state = {
@@ -20,18 +19,18 @@ class SearchBar extends React.Component {
 		event.preventDefault();
 
 		// logs the input
-		console.log(`${this.state.search}`)
+		// console.log(`${this.state.search}`)
 
 		// fetching from the api
 		fetch(`https://api.themoviedb.org/3/search/movie?api_key=${this.apiKey}&query=${this.state.search}`)
 			.then(data => data.json())
 			.then(data => {
 				// where it logs the data
-				console.log(data);
+				// console.log(data);
 				// sets the movies array to all the results
-				this.setState({ 
-					movies: [...data.results], 
-					totalResults: data.total_results 
+				this.setState({
+					movies: [...data.results],
+					totalResults: data.total_results
 				})
 
 				//this transfers these states to /Results
@@ -49,10 +48,12 @@ class SearchBar extends React.Component {
 
 	handleSearchChange = (event) => {
 		// changes the textfield whenever text is typed in
-		this.setState({
-			//assigning search each letter when inputed
-			search: event.target.value
-		})
+		if (event.target.value.length < 100) {
+			this.setState({
+				//assigning search each letter when inputed
+				search: event.target.value
+			});
+		}
 	}
 
 	nextPage = (pageNumber) => {
@@ -60,7 +61,7 @@ class SearchBar extends React.Component {
 			.then(data => data.json())
 			.then(data => {
 				// where it logs the data
-				console.log(data);
+				// console.log(data);
 				// sets the movies array to all the results
 				this.setState({ movies: [...data.results], currentPage: pageNumber })
 			})
@@ -70,7 +71,6 @@ class SearchBar extends React.Component {
 	//https://api.themoviedb.org/3/genre/movie/list?api_key=<<api_key>>&language=en-US
 
 	render() {
-		const numberPage = Math.floor(this.state.totalResults / 20)
 		return (
 			<div>
 				<Container>
@@ -86,7 +86,6 @@ class SearchBar extends React.Component {
 							onChange={this.handleSearchChange}
 							size="small"
 							style={{ backgroundColor: 'white' }}
-
 						/>
 
 						<Button
@@ -96,7 +95,7 @@ class SearchBar extends React.Component {
 							style={{ height: '50px' }}
 						>
 							Search
-				</Button>
+						</Button>
 					</form>
 				</Container>
 			</div>

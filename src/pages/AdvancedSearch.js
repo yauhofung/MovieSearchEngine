@@ -73,7 +73,6 @@ class AdvancedSearch extends React.Component {
 								onChange={(event) => { this.handleSearchChange(event); }}
 								size="small"
 								style={{ backgroundColor: 'white' }}
-
 							/>
 						</Grid>
 

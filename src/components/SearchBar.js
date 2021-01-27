@@ -34,7 +34,7 @@ class SearchBar extends React.Component {
 					totalResults: data.total_results 
 				})
 
-				//this.setState({ movies: [...data.results], totalResults: data.total_results})
+				//this transfers these states to /Results
 				this.props.history.push({
 					pathname: "/Results",
 					getProps: {

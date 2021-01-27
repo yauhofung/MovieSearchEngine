@@ -56,33 +56,27 @@ class AdvancedSearch extends React.Component {
 			<Container>
 				{/* Hooks to handleSubmit */}
 				<form onSubmit={this.handleSubmit}>
-					<TextField
-						variant="filled"
-						label="Search Movie"
-						color="primary"
-						type="text"
-						value={this.state.search}
-						// hooks to onChange
-						onChange={(event) => { this.handleSearchChange(event); }}
-						size="small"
-						style={{ backgroundColor: 'white' }}
-
-					/>
-					<Button
-						type='submit'
-						color='primary'
-						variant='contained'
-						style={{ height: '50px' }}
-					>
-						Search
-					</Button>
 
 					<Grid container spacing={1}>
 						<Grid item xs={12}>
 							<Typography variant='h5' align='center'>
 								Advanced Search
 							</Typography>
+
+							<TextField
+								variant="filled"
+								label="Search Movie"
+								color="primary"
+								type="text"
+								value={this.state.search}
+								// hooks to onChange
+								onChange={(event) => { this.handleSearchChange(event); }}
+								size="small"
+								style={{ backgroundColor: 'white' }}
+
+							/>
 						</Grid>
+
 						<Grid item xs={12} md={6}>
 							<TextField
 								variant='outlined'

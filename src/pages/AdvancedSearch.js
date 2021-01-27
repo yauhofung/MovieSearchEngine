@@ -110,10 +110,12 @@ class AdvancedSearch extends React.Component {
 						</Grid>
 						<Grid item xs={12}>
 							<Button
+								id = "searchBtn"
 								type='submit'
 								color="primary"
 								variant='contained'
 								fullWidth
+								disabled={!this.state.search}
 							>
 								Search
 							</Button>

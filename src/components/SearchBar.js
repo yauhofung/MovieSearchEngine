@@ -93,6 +93,7 @@ class SearchBar extends React.Component {
 							color='primary'
 							variant='contained'
 							style={{ height: '50px' }}
+							disabled={!this.state.search}
 						>
 							Search
 						</Button>

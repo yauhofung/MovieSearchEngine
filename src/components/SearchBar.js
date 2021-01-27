@@ -12,7 +12,7 @@ class SearchBar extends React.Component {
 			totalResults: 0,
 			currentPage: 1
 		}
-		this.apiKey = REACT_APP_API
+		this.apiKey = process.env.REACT_APP_API
 	}
 
 	handleSubmit = (event) => {

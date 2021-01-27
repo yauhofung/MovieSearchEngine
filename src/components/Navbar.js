@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { AppBar, Toolbar, IconButton, Typography, Button } from '@material-ui/core';
+import { AppBar, Toolbar, IconButton, Typography, Button, Hidden } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 
 import HomeIcon from '@material-ui/icons/Home';
@@ -22,17 +22,21 @@ class Navbar extends React.Component {
 						Movie Search Engine
 					</Typography>
 
-					<Link to='/AdvancedSearch'>
-						<Button style={{ color: 'white', margin: '5px 0 0 5px' }}>
-							<SearchIcon /> Advanced Search
+					<Hidden xsDown>
+						<Link to='/AdvancedSearch'>
+							<Button style={{ color: 'white', margin: '5px 0 0 5px' }}>
+								<SearchIcon /> Advanced Search
 						</Button>
-					</Link>
+						</Link>
+					</Hidden>
 
 					<SearchBar />
 
-					<Button color='secondary' variant='contained' >
-						Login
-					</Button>
+					<Hidden xsDown>
+						<Button color='secondary' variant='contained' >
+							Login
+						</Button>
+					</Hidden>
 				</Toolbar>
 			</AppBar>
 		);

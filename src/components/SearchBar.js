@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { TextField, Container, Button } from '@material-ui/core';
+import { TextField, Container, Button, Hidden } from '@material-ui/core';
 import { withRouter } from 'react-router-dom';
 
 class SearchBar extends React.Component {
@@ -87,16 +87,17 @@ class SearchBar extends React.Component {
 							size="small"
 							style={{ backgroundColor: 'white' }}
 						/>
-
-						<Button
-							type='submit'
-							color='primary'
-							variant='contained'
-							style={{ height: '50px' }}
-							disabled={!this.state.search}
-						>
-							Search
+						<Hidden mdDown>
+							<Button
+								type='submit'
+								color='primary'
+								variant='contained'
+								style={{ height: '50px' }}
+								disabled={!this.state.search}
+							>
+								Search
 						</Button>
+						</Hidden>
 					</form>
 				</Container>
 			</div>

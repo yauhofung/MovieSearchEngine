@@ -33,7 +33,6 @@ class Home extends React.Component {
 						(insert GridList)
 					</Container>
 				</Grid>
-
 			</Grid>
 		);
 	}

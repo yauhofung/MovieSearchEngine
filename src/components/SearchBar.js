@@ -48,10 +48,12 @@ class SearchBar extends React.Component {
 
 	handleSearchChange = (event) => {
 		// changes the textfield whenever text is typed in
-		this.setState({
-			//assigning search each letter when inputed
-			search: event.target.value
-		})
+		if (event.target.value.length < 100) {
+			this.setState({
+				//assigning search each letter when inputed
+				search: event.target.value
+			});
+		}
 	}
 
 	nextPage = (pageNumber) => {
@@ -84,7 +86,6 @@ class SearchBar extends React.Component {
 							onChange={this.handleSearchChange}
 							size="small"
 							style={{ backgroundColor: 'white' }}
-
 						/>
 
 						<Button

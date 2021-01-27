@@ -4,7 +4,6 @@ import { TextField, Container, Button } from '@material-ui/core';
 import { withRouter } from 'react-router-dom';
 
 class SearchBar extends React.Component {
-
 	constructor(props) {
 		super(props)
 		this.state = {
@@ -29,9 +28,9 @@ class SearchBar extends React.Component {
 				// where it logs the data
 				console.log(data);
 				// sets the movies array to all the results
-				this.setState({ 
-					movies: [...data.results], 
-					totalResults: data.total_results 
+				this.setState({
+					movies: [...data.results],
+					totalResults: data.total_results
 				})
 
 				//this transfers these states to /Results
@@ -70,7 +69,6 @@ class SearchBar extends React.Component {
 	//https://api.themoviedb.org/3/genre/movie/list?api_key=<<api_key>>&language=en-US
 
 	render() {
-		const numberPage = Math.floor(this.state.totalResults / 20)
 		return (
 			<div>
 				<Container>
@@ -96,7 +94,7 @@ class SearchBar extends React.Component {
 							style={{ height: '50px' }}
 						>
 							Search
-				</Button>
+						</Button>
 					</form>
 				</Container>
 			</div>

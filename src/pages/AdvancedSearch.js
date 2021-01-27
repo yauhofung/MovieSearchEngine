@@ -51,7 +51,7 @@ class AdvancedSearch extends React.Component {
 	}
 
 	render() {
-		const numberPage = Math.floor(this.state.totalResults / 20)
+		const numberPage = Math.floor(this.state.totalResults / 20);
 		return (
 			<Container>
 				{/* Hooks to handleSubmit */}
@@ -123,13 +123,13 @@ class AdvancedSearch extends React.Component {
 				</form>
 				<MovieList movies={this.state.movies} />
 				{
-					this.state.totalResults > 25 ?
+					this.state.totalResults > 20 ?
 						<Pagination
 							pages={numberPage}
 							nextPage={this.nextPage}
 							currentPage={this.state.currentPage}
 						/> :
-						<></>
+						''
 				}
 			</Container>
 		);

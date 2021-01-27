@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { Grid } from '@material-ui/core';
+import { Pagination } from '@material-ui/lab';
 
 import MoviePage from './MoviePage';
 

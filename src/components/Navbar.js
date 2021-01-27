@@ -26,7 +26,7 @@ class Navbar extends React.Component {
 						<Link to='/AdvancedSearch'>
 							<Button style={{ color: 'white', margin: '5px 0 0 5px' }}>
 								<SearchIcon /> Advanced Search
-						</Button>
+							</Button>
 						</Link>
 					</Hidden>
 

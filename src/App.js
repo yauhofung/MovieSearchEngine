@@ -1,7 +1,8 @@
 import React from 'react';
 
-import { Card, CardContent, Container, Typography } from '@material-ui/core';
-import { Switch, Route } from 'react-router-dom';
+import { Card, CardContent, Container, Typography, Hidden, Button } from '@material-ui/core';
+import { Switch, Route, Link } from 'react-router-dom';
+import SearchIcon from '@material-ui/icons/Search';
 
 import Navbar from './components/Navbar';
 import AdvancedSearch from './pages/AdvancedSearch';
@@ -14,6 +15,13 @@ class App extends React.Component {
 			<>
 				<Navbar />
 				<Container>
+					<Hidden mdUp>
+						<Link to='/AdvancedSearch'>
+							<Button style={{ color: 'primary', margin: '5px 0 0 5px' }}>
+								<SearchIcon /> Advanced Search
+							</Button>
+						</Link>
+					</Hidden>
 					<Card variant='outlined'>
 						<CardContent>
 							{/* Switch */}
@@ -37,7 +45,7 @@ class App extends React.Component {
 				</Container>
 				<br></br>
 				<Container>
-				<Typography>This product uses the TMDb API but is not endorsed or certified by TMDb</Typography>
+					<Typography>This product uses the TMDb API but is not endorsed or certified by TMDb</Typography>
 				</Container>
 			</>
 		);

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Card, CardContent, Container } from '@material-ui/core';
+import { Card, CardContent, Container, Typography } from '@material-ui/core';
 import { Switch, Route } from 'react-router-dom';
 
 import Navbar from './components/Navbar';
@@ -34,6 +34,10 @@ class App extends React.Component {
 							</Switch>
 						</CardContent>
 					</Card>
+				</Container>
+				<br></br>
+				<Container>
+				<Typography>This product uses the TMDb API but is not endorsed or certified by TMDb</Typography>
 				</Container>
 			</>
 		);

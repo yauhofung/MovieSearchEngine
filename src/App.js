@@ -6,6 +6,7 @@ import { Switch, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import AdvancedSearch from './pages/AdvancedSearch';
 import Home from './pages/Home';
+import Results from './pages/Results'
 
 class App extends React.Component {
 	render() {
@@ -20,6 +21,10 @@ class App extends React.Component {
 								{/* Advanced Search Page */}
 								<Route path="/AdvancedSearch">
 									<AdvancedSearch />
+								</Route>
+
+								<Route path="/Results">
+									<Results />
 								</Route>
 
 								{/* Home Page */}

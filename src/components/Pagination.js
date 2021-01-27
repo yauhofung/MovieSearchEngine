@@ -27,10 +27,10 @@ const Pagination = (props) => {
 		<>
 
 
-			<Grid container spacing={2}>
+			<Grid container direction="row" justify="center" alignItems="baseline" spacing={3}>
 				{
 					props.currentPage > 1 ?
-						<Grid item xs={12}
+						<Grid item xs
 							onClick={() => props.nextPage(props.currentPage - 1)}
 						>
 							<Button href="#">
@@ -39,12 +39,12 @@ const Pagination = (props) => {
 						</Grid> :
 						''
 				}
-				<Grid container item xs={12}>
+				<Grid container item xs={10}>
 					{pageLinks}
 				</Grid>
 				{
 					props.currentPage < props.pages + 1 ?
-						<Grid item xs={12}
+						<Grid item xs
 							onClick={() => props.nextPage(props.currentPage + 1)}
 						>
 							<Button href="#">

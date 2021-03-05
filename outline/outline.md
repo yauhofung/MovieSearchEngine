@@ -1,4 +1,4 @@
-# Capstone Outline
+# Movie Search Engine
 
 ## Purpose Statement
 A search engine that allows users to search for movies.
@@ -11,10 +11,10 @@ A search engine that allows users to search for movies.
 - Yau Ho has been hearing about *Synchronic*, a Sci-Fi film and decides to look it up and see what it's about using the "Movie Search Engine."
 
 ## Detailed Sketches
-- [Main Page](capstone_mainpage.jpg)
-- [Search Result Page](capstone_searchresultpage.jpg)
-- [Recommendation Page](capstone_recommendations.jpg)
-- [Movie Page](capstone_actualmoviepage.jpg)
+- [Main Page](outline/capstone_mainpage.jpg)
+- [Search Result Page](outline/capstone_searchresultpage.jpg)
+- [Recommendation Page](outline/capstone_recommendations.jpg)
+- [Movie Page](outline/capstone_actualmoviepage.jpg)
 
 ## Pseudocodes
 - input();

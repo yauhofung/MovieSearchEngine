@@ -1,7 +1,7 @@
 # Movie Search Engine
 
 ## Purpose Statement
-A search engine that allows users to search for movies.
+A web-based movie search engine with an external API integration.
 
 ## High-Level Features / User Stories
 - Users can search for movies by title and/or genre.
@@ -15,9 +15,3 @@ A search engine that allows users to search for movies.
 - [Search Result Page](outline/capstone_searchresultpage.jpg)
 - [Recommendation Page](outline/capstone_recommendations.jpg)
 - [Movie Page](outline/capstone_actualmoviepage.jpg)
-
-## Pseudocodes
-- input();
-- searchMovie();
-- compareGenre();
-- returnMovies();
